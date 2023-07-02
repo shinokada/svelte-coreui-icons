@@ -1,6 +1,6 @@
 {
   "name": "svelte-coreui-icons",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Svelte SVG component set for CoreUI icons",
   "author": {
     "name": "Shinichi Okada",
