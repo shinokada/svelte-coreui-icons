@@ -1,0 +1,64 @@
+<script>
+	export let color = 'currentColor';
+	export let role = 'img';
+	export let size = '32';
+	export let ariaLabel = 'cil hot tub';
+</script>
+
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	width={size}
+	height={size}
+	{role}
+	{...$$restProps}
+	aria-label={ariaLabel}
+	fill={color}
+	on:click
+	on:keydown
+	on:keyup
+	on:focus
+	on:blur
+	on:mouseenter
+	on:mouseleave
+	on:mouseover
+	on:mouseout
+	viewBox="0 0 512 512"
+>
+	<circle cx="111.485" cy="141.912" r="34.088" fill="var(--ci-primary-color, {color})" />
+	<path
+		fill="var(--ci-primary-color, {color})"
+		d="M192,296h-3.041L154.05,200H82.287v96H16V448a48.054,48.054,0,0,0,48,48H448a48.054,48.054,0,0,0,48-48V296ZM464,448a16.019,16.019,0,0,1-16,16H64a16.019,16.019,0,0,1-16-16V328H464Z"
+	/>
+	<path
+		fill="var(--ci-primary-color, {color})"
+		d="M296,216a20.376,20.376,0,0,1,12.362-18.748l11.881-5.091a52.4,52.4,0,0,0,0-96.321l-11.881-5.092A20.376,20.376,0,0,1,296,72V32H264V72a52.336,52.336,0,0,0,31.757,48.16l11.881,5.092a20.4,20.4,0,0,1,0,37.5l-11.881,5.091A52.338,52.338,0,0,0,264,216v48h32Z"
+	/>
+	<path
+		fill="var(--ci-primary-color, {color})"
+		d="M408,216a20.376,20.376,0,0,1,12.362-18.748l11.881-5.091a52.4,52.4,0,0,0,0-96.321l-11.881-5.092A20.376,20.376,0,0,1,408,72V32H376V72a52.336,52.336,0,0,0,31.757,48.16l11.881,5.092a20.4,20.4,0,0,1,0,37.5l-11.881,5.091A52.338,52.338,0,0,0,376,216v48h32Z"
+	/>
+	<rect width="32" height="72" x="96" y="360" fill="var(--ci-primary-color, {color})" />
+	<rect width="32" height="72" x="192" y="360" fill="var(--ci-primary-color, {color})" />
+	<rect width="32" height="72" x="288" y="360" fill="var(--ci-primary-color, {color})" />
+	<rect width="32" height="72" x="384" y="360" fill="var(--ci-primary-color, {color})" />
+</svg>
+
+<!--
+@component
+[Go to Document](https://shinokada.github.io/svelte-coreui-icons/)
+## Props
+@prop role = 'img';
+@prop size = '32';
+@prop color = 'currentColor'
+@prop ariaLabel='file name'
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->

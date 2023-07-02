@@ -1,0 +1,51 @@
+<script>
+	export let color = 'currentColor';
+	export let role = 'img';
+	export let size = '32';
+	export let ariaLabel = 'cil command';
+</script>
+
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	width={size}
+	height={size}
+	{role}
+	{...$$restProps}
+	aria-label={ariaLabel}
+	fill={color}
+	on:click
+	on:keydown
+	on:keyup
+	on:focus
+	on:blur
+	on:mouseenter
+	on:mouseleave
+	on:mouseover
+	on:mouseout
+	viewBox="0 0 512 512"
+>
+	<path
+		fill="var(--ci-primary-color, {color})"
+		d="M416,176a80,80,0,1,0-80-80v48H176V96a80,80,0,1,0-80,80h48V336H96a80,80,0,1,0,80,80V368H336v48a80,80,0,1,0,80-80H368V176ZM368,96a48,48,0,1,1,48,48H368ZM144,416a48,48,0,1,1-48-48h48Zm0-272H96a48,48,0,1,1,48-48ZM336,336H176V176H336Zm80,32a48,48,0,1,1-48,48V368Z"
+	/>
+</svg>
+
+<!--
+@component
+[Go to Document](https://shinokada.github.io/svelte-coreui-icons/)
+## Props
+@prop role = 'img';
+@prop size = '32';
+@prop color = 'currentColor'
+@prop ariaLabel='file name'
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->

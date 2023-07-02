@@ -1,0 +1,51 @@
+<script>
+	export let color = 'currentColor';
+	export let role = 'img';
+	export let size = '32';
+	export let ariaLabel = 'cil bolt';
+</script>
+
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	width={size}
+	height={size}
+	{role}
+	{...$$restProps}
+	aria-label={ariaLabel}
+	fill={color}
+	on:click
+	on:keydown
+	on:keyup
+	on:focus
+	on:blur
+	on:mouseenter
+	on:mouseleave
+	on:mouseover
+	on:mouseout
+	viewBox="0 0 512 512"
+>
+	<path
+		fill="var(--ci-primary-color, {color})"
+		d="M331.464,192l77-176H147.879l-81,288H187.9L148.37,496h58.851L475.456,192ZM192.779,464H187.63l39.529-192H109.121l63-224H359.536l-77,176H404.545Z"
+	/>
+</svg>
+
+<!--
+@component
+[Go to Document](https://shinokada.github.io/svelte-coreui-icons/)
+## Props
+@prop role = 'img';
+@prop size = '32';
+@prop color = 'currentColor'
+@prop ariaLabel='file name'
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->

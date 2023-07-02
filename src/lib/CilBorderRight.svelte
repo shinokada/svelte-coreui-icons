@@ -1,0 +1,131 @@
+<script>
+	export let color = 'currentColor';
+	export let role = 'img';
+	export let size = '32';
+	export let ariaLabel = 'cil border right';
+</script>
+
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	width={size}
+	height={size}
+	{role}
+	{...$$restProps}
+	aria-label={ariaLabel}
+	fill={color}
+	on:click
+	on:keydown
+	on:keyup
+	on:focus
+	on:blur
+	on:mouseenter
+	on:mouseleave
+	on:mouseover
+	on:mouseout
+	viewBox="0 0 512 512"
+>
+	<polygon
+		fill="var(--ci-primary-color, {color})"
+		points="472 440 472 406.545 472 373.091 472 339.636 472 306.182 472 272.727 472 239.272 472 205.817 472 172.363 472 138.908 472 105.454 472 72 472 40 440 40 440 72 440 105.454 440 138.908 440 172.363 440 205.817 440 239.272 440 240 440 272 440 272.727 440 306.182 440 339.636 440 373.091 440 406.545 440 440 440 472 472 472 472 440"
+	/>
+	<rect width="33.455" height="32" x="306.182" y="440" fill="var(--ci-primary-color, {color})" />
+	<rect width="33.455" height="32" x="172.364" y="440" fill="var(--ci-primary-color, {color})" />
+	<rect width="33.455" height="32" x="373.091" y="440" fill="var(--ci-primary-color, {color})" />
+	<rect width="33.455" height="32" x="105.455" y="440" fill="var(--ci-primary-color, {color})" />
+	<rect width="32" height="32" x="40" y="440" fill="var(--ci-primary-color, {color})" />
+	<rect width="32" height="33.454" x="40" y="306.183" fill="var(--ci-primary-color, {color})" />
+	<rect width="32" height="33.454" x="40" y="373.092" fill="var(--ci-primary-color, {color})" />
+	<rect width="32" height="33.455" x="40" y="239.272" fill="var(--ci-primary-color, {color})" />
+	<rect width="32" height="33.454" x="40" y="172.364" fill="var(--ci-primary-color, {color})" />
+	<rect width="32" height="33.454" x="40" y="105.455" fill="var(--ci-primary-color, {color})" />
+	<rect width="32" height="32" x="40" y="40" fill="var(--ci-primary-color, {color})" />
+	<rect width="33.455" height="32" x="306.182" y="40" fill="var(--ci-primary-color, {color})" />
+	<rect width="33.455" height="32" x="172.364" y="40" fill="var(--ci-primary-color, {color})" />
+	<rect width="33.455" height="32" x="373.091" y="40" fill="var(--ci-primary-color, {color})" />
+	<rect width="33.455" height="32" x="239.272" y="40" fill="var(--ci-primary-color, {color})" />
+	<rect width="33.455" height="32" x="105.455" y="40" fill="var(--ci-primary-color, {color})" />
+	<rect
+		width="33.455"
+		height="33.455"
+		x="239.272"
+		y="239.272"
+		fill="var(--ci-primary-color, {color})"
+	/>
+	<rect
+		width="33.455"
+		height="33.454"
+		x="239.272"
+		y="306.182"
+		fill="var(--ci-primary-color, {color})"
+	/>
+	<rect
+		width="33.455"
+		height="33.454"
+		x="239.272"
+		y="172.363"
+		fill="var(--ci-primary-color, {color})"
+	/>
+	<rect
+		width="33.455"
+		height="33.454"
+		x="239.272"
+		y="105.454"
+		fill="var(--ci-primary-color, {color})"
+	/>
+	<rect
+		width="33.455"
+		height="33.454"
+		x="239.272"
+		y="373.091"
+		fill="var(--ci-primary-color, {color})"
+	/>
+	<rect width="33.455" height="32" x="239.272" y="440" fill="var(--ci-primary-color, {color})" />
+	<rect
+		width="33.455"
+		height="33.455"
+		x="306.182"
+		y="239.272"
+		fill="var(--ci-primary-color, {color})"
+	/>
+	<rect
+		width="33.455"
+		height="33.455"
+		x="373.091"
+		y="239.272"
+		fill="var(--ci-primary-color, {color})"
+	/>
+	<rect
+		width="33.455"
+		height="33.455"
+		x="172.364"
+		y="239.272"
+		fill="var(--ci-primary-color, {color})"
+	/>
+	<rect
+		width="33.455"
+		height="33.455"
+		x="105.455"
+		y="239.272"
+		fill="var(--ci-primary-color, {color})"
+	/>
+</svg>
+
+<!--
+@component
+[Go to Document](https://shinokada.github.io/svelte-coreui-icons/)
+## Props
+@prop role = 'img';
+@prop size = '32';
+@prop color = 'currentColor'
+@prop ariaLabel='file name'
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->
