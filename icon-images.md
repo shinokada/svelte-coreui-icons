@@ -1,6 +1,6 @@
 # Icon images
 
-<div style="width: 450px; margin: 0 auto; text-align: center;">
+<div style="text-align: center;">
 
 ## Brand
 <img style="display: block;" width="450" src="https://raw.githubusercontent.com/shinokada/svelte-coreui-icons/main/static/images/coreui-brand-color.webp" />

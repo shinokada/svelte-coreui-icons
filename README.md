@@ -1,7 +1,7 @@
 <h1 align="center">Svelte Coreui Icons</h1>
 
 <p align="center">
-<a href="https://shinokada.github.io/svelte-coreui-icons/">Svelte-Coreui-Icons</a>
+<a href="https://github.com/shinokada/svelte-coreui-icons">Svelte-Coreui-Icons</a>
 </p>
 
 <p align="center">
