@@ -82,7 +82,11 @@ To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleRe
 
 ## REPL
 
-[Demo 1](https://svelte.dev/repl/89542341632d4827ab30491ef95df6eb)
+- [REPL Brand color](https://svelte.dev/repl/ac949cb9d7724e1880ba3eedbb6451d3?version=4.0.1)
+- [REPL Brand mono](https://svelte.dev/repl/3184ec4ba05949d2be244dada275ef19?version=4.0.1)
+- [REPL Flag](https://svelte.dev/repl/7577675a430342d9a8e45767fec9240e?version=4.0.1)
+- [REPL Free color](https://svelte.dev/repl/377e91aa08364ea79d0c2831ae27ea9d?version=4.0.1)
+- [REPL Free mono](https://svelte.dev/repl/83d5b74b88a6413786750e7ae1418d8b?version=4.0.1)
 
 ## Props
 
@@ -100,7 +104,7 @@ Use the `size` prop to change the size of icons.
 
 ```html
 <script>
-  import { Cib500px, Activity, Airplay } from 'svelte-coreui-icons';
+  import { Cib500px } from 'svelte-coreui-icons';
 </script>
 
 <Cib500px size="30" />
@@ -194,7 +198,6 @@ You can pass other attibutes as well.
 
 ## Import all
 
-[REPL]()
 
 Use `import * as Icon from 'svelte-coreui-icons`.
 
