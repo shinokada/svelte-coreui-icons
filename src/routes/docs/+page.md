@@ -111,7 +111,7 @@ Use the `color` prop to change colors with HEX color code.
 
 ## CSS frameworks suport
 
-Use the `class` prop to change colors and add additional css.
+You can apply CSS framework color and other attributes directly to the icon component or its parent tag using the `class` prop.
 
 Tailwind example:
 
@@ -120,7 +120,7 @@ Tailwind example:
   import { Cib500px } from 'svelte-coreui-icons';
 </script>
 
-<Cib500px class="text-blue-700 mr-4" />
+<Cib500px class="text-red-700 dark:text-green-300 inline m-1" />
 ```
 
 Bootstrap example:
