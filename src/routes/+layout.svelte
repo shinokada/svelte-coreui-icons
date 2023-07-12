@@ -8,7 +8,7 @@
   import NavUl from 'flowbite-svelte/NavUl.svelte';
   import NavHamburger from 'flowbite-svelte/NavHamburger.svelte';
   import Footer from 'flowbite-svelte/Footer.svelte'
-  import FooterCopyright from 'flowbite-svelte/FooterCopyright.svelte'
+  import FooterBrand from 'flowbite-svelte/FooterBrand.svelte'
   import FooterLinkGroup from 'flowbite-svelte/FooterLinkGroup.svelte'
   import FooterLink from 'flowbite-svelte/FooterLink.svelte'
   import { MetaTags } from 'svelte-meta-tags';
@@ -58,8 +58,12 @@
   <slot />
 </div>
 
-<Footer class="dark:bg-gray-900">
-  <FooterCopyright href="/" by="Svelte CoreUI Icons" year={2023} />
+<Footer footerType="logo" class="dark:bg-gray-900">
+  <div class="sm:flex sm:items-center sm:justify-between">
+    <FooterBrand
+    href="https://svelte-coreui-icons.vercel.app/"
+    name="Flowbite Svelte Icons"
+  />
   <FooterLinkGroup ulClass="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
     <FooterLink href="/brand">Brand</FooterLink>
     <FooterLink href="/flag">Flag</FooterLink>
@@ -68,5 +72,6 @@
     <FooterLink href="https://github.com/shinokada/svelte-coreui-icons/blob/main/LICENSE">Licensing</FooterLink>
     <FooterLink href="https://github.com/shinokada/svelte-coreui-icons/">GitHub</FooterLink>
   </FooterLinkGroup>
+  </div>
 </Footer>
 
