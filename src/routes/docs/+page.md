@@ -1,9 +1,5 @@
 # Svelte Coreui Icons
 
-<p align="center">
-<a href="https://github.com/shinokada/svelte-coreui-icons">Svelte-Coreui-Icons</a>
-</p>
-
 <div class="flex justify-center gap-2 my-8">
 <a href="https://github.com/sponsors/shinokada" target="_blank"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" height="25"></a>
 <a href="https://www.npmjs.com/package/svelte-coreui-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/v/svelte-coreui-icons" alt="npm" height="25"></a>
@@ -72,13 +68,6 @@ To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleRe
 }
 ```
 
-## REPL
-
-- [REPL Brand color](https://svelte.dev/repl/ac949cb9d7724e1880ba3eedbb6451d3?version=4.0.1)
-- [REPL Brand mono](https://svelte.dev/repl/3184ec4ba05949d2be244dada275ef19?version=4.0.1)
-- [REPL Flag](https://svelte.dev/repl/7577675a430342d9a8e45767fec9240e?version=4.0.1)
-- [REPL Free color](https://svelte.dev/repl/377e91aa08364ea79d0c2831ae27ea9d?version=4.0.1)
-- [REPL Free mono](https://svelte.dev/repl/83d5b74b88a6413786750e7ae1418d8b?version=4.0.1)
 
 ## Props
 
@@ -148,6 +137,15 @@ Let's use `dark` for the dark mode class as an example.
 <Cib500px class="text-blue-700 dark:text-red-500" />
 ```
 
+## aria-label
+
+All icons have aria-label. For example `Cib500px` has `aria-label="cib 500px"`.
+Use `ariaLabel` prop to modify the `aria-label` value.
+
+```html
+<Cib500px ariaLabel="my aria label" />
+```
+
 ## Unfocusable icon
 
 If you want to make an icon unfocusable, add `tabindex="-1"`.
@@ -188,8 +186,23 @@ You can pass other attibutes as well.
 <svelte:component this="{Cib500px}" />
 ```
 
-## Import all
+## Using onMount
 
+```html
+<script>
+  import { Cib500px } from 'svelte-coreui-icons';
+  import { onMount } from 'svelte';
+  const props = {
+    size: '50',
+    color: '#ff0000'
+  };
+  onMount(() => {
+    const icon = new Cib500px({ target: document.body, props });
+  });
+</script>
+```
+
+## Import all
 
 Use `import * as Icon from 'svelte-coreui-icons`.
 
