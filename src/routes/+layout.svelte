@@ -7,6 +7,10 @@
   import NavLi from 'flowbite-svelte/NavLi.svelte';
   import NavUl from 'flowbite-svelte/NavUl.svelte';
   import NavHamburger from 'flowbite-svelte/NavHamburger.svelte';
+  import Footer from 'flowbite-svelte/Footer.svelte'
+  import FooterCopyright from 'flowbite-svelte/FooterCopyright.svelte'
+  import FooterLinkGroup from 'flowbite-svelte/FooterLinkGroup.svelte'
+  import FooterLink from 'flowbite-svelte/FooterLink.svelte'
   import { MetaTags } from 'svelte-meta-tags';
 
   $: activeUrl = $page.url.pathname;
@@ -32,7 +36,7 @@
     imageAlt: "Svelte CoreUI Icons"
   }} />
   
-<Navbar let:hidden let:toggle class="mb-8">
+<Navbar let:hidden let:toggle >
   <NavBrand href="/">
     <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
       Svelte CoreUI Icons
@@ -44,9 +48,25 @@
     <NavLi href="/brand" active={activeUrl === '/outline'}>Brand</NavLi>
     <NavLi href="/flag" active={activeUrl === '/solid'}>Flag</NavLi>
     <NavLi href="/free" active={activeUrl === '/solid'}>Free</NavLi>
+    <NavLi href="/docs" active={activeUrl === '/docs'}>Docs</NavLi>
     <NavLi href="https://github.com/shinokada/svelte-coreui-icons">GitHub</NavLi>
     <NavLi href="https://svelte-svg-icons.vercel.app/">Icon sets</NavLi>
   </NavUl>
   <DarkMode />
 </Navbar>
-<slot />
+<div class="mx-16 mb-16">
+  <slot />
+</div>
+
+<Footer class="dark:bg-gray-900">
+  <FooterCopyright href="/" by="Svelte CoreUI Icons" year={2023} />
+  <FooterLinkGroup ulClass="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+    <FooterLink href="/brand">Brand</FooterLink>
+    <FooterLink href="/flag">Flag</FooterLink>
+    <FooterLink href="/free">Free</FooterLink>
+    <FooterLink href="/docs">Docs</FooterLink>
+    <FooterLink href="https://github.com/shinokada/svelte-coreui-icons/blob/main/LICENSE">Licensing</FooterLink>
+    <FooterLink href="https://github.com/shinokada/svelte-coreui-icons/">GitHub</FooterLink>
+  </FooterLinkGroup>
+</Footer>
+
