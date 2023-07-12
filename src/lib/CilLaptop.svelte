@@ -1,34 +1,25 @@
 <script>
-	export let color = 'currentColor';
-	export let role = 'img';
-	export let size = '32';
-	export let ariaLabel = 'cil laptop';
+export let color = "currentColor"
+export let role="img";
+export let size = "32"; export let ariaLabel="cil laptop" 
 </script>
-
-<svg
-	xmlns="http://www.w3.org/2000/svg"
-	width={size}
-	height={size}
-	{role}
-	{...$$restProps}
-	aria-label={ariaLabel}
-	fill={color}
-	on:click
-	on:keydown
-	on:keyup
-	on:focus
-	on:blur
-	on:mouseenter
-	on:mouseleave
-	on:mouseover
-	on:mouseout
-	viewBox="0 0 512 512"
->
-	<path
-		fill="var(--ci-primary-color, {color})"
-		d="M440,368a24.028,24.028,0,0,0,24-24V104a24.028,24.028,0,0,0-24-24H72a24.028,24.028,0,0,0-24,24V344a24.028,24.028,0,0,0,24,24ZM80,112H432V336H80Z"
-	/>
-	<rect width="480" height="32" x="16" y="400" fill="var(--ci-primary-color, {color})" />
+<svg xmlns="http://www.w3.org/2000/svg" width="{size}"
+height="{size}" {role}
+{...$$restProps}
+aria-label="{ariaLabel}"
+fill="{color}"
+on:click
+on:keydown
+on:keyup
+on:focus
+on:blur
+on:mouseenter
+on:mouseleave
+on:mouseover
+on:mouseout
+ viewBox="0 0 512 512">
+  <path fill="var(--ci-primary-color, {color})" d="M440,368a24.028,24.028,0,0,0,24-24V104a24.028,24.028,0,0,0-24-24H72a24.028,24.028,0,0,0-24,24V344a24.028,24.028,0,0,0,24,24ZM80,112H432V336H80Z" />
+  <rect width="480" height="32" x="16" y="400" fill="var(--ci-primary-color, {color})" />
 </svg>
 
 <!--

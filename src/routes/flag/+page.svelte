@@ -1,203 +1,79 @@
 <script>
-	import * as Icon from '$lib';
+  import Tabs from 'flowbite-svelte/Tabs.svelte';
+  import TabItem from 'flowbite-svelte/TabItem.svelte';
+  import TableSearch from 'flowbite-svelte/TableSearch.svelte';
+
+  import * as Icons from '$lib';
+
+  const random_tailwind_color = () => {
+    const colors = ['red', 'yellow', 'green', 'blue', 'indigo', 'purple', 'pink'];
+    const shades = ['300', '400', '500'];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    const randomShade = shades[Math.floor(Math.random() * shades.length)];
+    return `text-${randomColor}-${randomShade} dark:text-${randomColor}-${randomShade} shrink-0 h-8 w-8`;
+  };
+  const random_hex_color_code = () => {
+    let n = (Math.random() * 0xfffff * 1000000).toString(16);
+    return '#' + n.slice(0, 6);
+  };
+  const contentClass = ' rounded-lg dark:bg-gray-900 mt-4';
+  let searchTerm = '';
+
+  $: filteredEntries = Object.entries(Icons).filter(([name, component]) => {
+    return name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
+  });
+  let divClass = 'mx-16';
 </script>
 
-<Icon.CifAd width="17%"/>
-<Icon.CifAe width="17%"/>
-<Icon.CifAf width="17%"/>
-<Icon.CifAg width="17%"/>
-<Icon.CifAl width="17%"/>
-<Icon.CifAm width="17%"/>
-<Icon.CifAo width="17%"/>
-<Icon.CifAr width="17%"/>
-<Icon.CifAt width="17%"/>
-<Icon.CifAu width="17%"/>
-<Icon.CifAz width="17%"/>
-<Icon.CifBa width="17%"/>
-<Icon.CifBb width="17%"/>
-<Icon.CifBd width="17%"/>
-<Icon.CifBe width="17%"/>
-<Icon.CifBf width="17%"/>
-<Icon.CifBg width="17%"/>
-<Icon.CifBh width="17%"/>
-<Icon.CifBi width="17%"/>
-<Icon.CifBj width="17%"/>
-<Icon.CifBn width="17%"/>
-<Icon.CifBo width="17%"/>
-<Icon.CifBr width="17%"/>
-<Icon.CifBs width="17%"/>
-<Icon.CifBt width="17%"/>
-<Icon.CifBw width="17%"/>
-<Icon.CifBy width="17%"/>
-<Icon.CifBz width="17%"/>
-<Icon.CifCa width="17%"/>
-<Icon.CifCd width="17%"/>
-<Icon.CifCf width="17%"/>
-<Icon.CifCg width="17%"/>
-<Icon.CifCh width="17%"/>
-<Icon.CifCi width="17%"/>
-<Icon.CifCk width="17%"/>
-<Icon.CifCl width="17%"/>
-<Icon.CifCm width="17%"/>
-<Icon.CifCn width="17%"/>
-<Icon.CifCo width="17%"/>
-<Icon.CifCr width="17%"/>
-<Icon.CifCu width="17%"/>
-<Icon.CifCv width="17%"/>
-<Icon.CifCy width="17%"/>
-<Icon.CifCz width="17%"/>
-<Icon.CifDe width="17%"/>
-<Icon.CifDj width="17%"/>
-<Icon.CifDk width="17%"/>
-<Icon.CifDm width="17%"/>
-<Icon.CifDo width="17%"/>
-<Icon.CifDz width="17%"/>
-<Icon.CifEc width="17%"/>
-<Icon.CifEe width="17%"/>
-<Icon.CifEg width="17%"/>
-<Icon.CifEr width="17%"/>
-<Icon.CifEs width="17%"/>
-<Icon.CifEt width="17%"/>
-<Icon.CifFi width="17%"/>
-<Icon.CifFj width="17%"/>
-<Icon.CifFm width="17%"/>
-<Icon.CifFr width="17%"/>
-<Icon.CifGa width="17%"/>
-<Icon.CifGb width="17%"/>
-<Icon.CifGd width="17%"/>
-<Icon.CifGe width="17%"/>
-<Icon.CifGh width="17%"/>
-<Icon.CifGm width="17%"/>
-<Icon.CifGn width="17%"/>
-<Icon.CifGq width="17%"/>
-<Icon.CifGr width="17%"/>
-<Icon.CifGt width="17%"/>
-<Icon.CifGw width="17%"/>
-<Icon.CifGy width="17%"/>
-<Icon.CifHk width="17%"/>
-<Icon.CifHn width="17%"/>
-<Icon.CifHr width="17%"/>
-<Icon.CifHt width="17%"/>
-<Icon.CifHu width="17%"/>
-<Icon.CifId width="17%"/>
-<Icon.CifIe width="17%"/>
-<Icon.CifIl width="17%"/>
-<Icon.CifIn width="17%"/>
-<Icon.CifIq width="17%"/>
-<Icon.CifIr width="17%"/>
-<Icon.CifIs width="17%"/>
-<Icon.CifIt width="17%"/>
-<Icon.CifJm width="17%"/>
-<Icon.CifJo width="17%"/>
-<Icon.CifJp width="17%"/>
-<Icon.CifKe width="17%"/>
-<Icon.CifKg width="17%"/>
-<Icon.CifKh width="17%"/>
-<Icon.CifKi width="17%"/>
-<Icon.CifKm width="17%"/>
-<Icon.CifKn width="17%"/>
-<Icon.CifKp width="17%"/>
-<Icon.CifKr width="17%"/>
-<Icon.CifKw width="17%"/>
-<Icon.CifKz width="17%"/>
-<Icon.CifLa width="17%"/>
-<Icon.CifLb width="17%"/>
-<Icon.CifLc width="17%"/>
-<Icon.CifLi width="17%"/>
-<Icon.CifLk width="17%"/>
-<Icon.CifLr width="17%"/>
-<Icon.CifLs width="17%"/>
-<Icon.CifLt width="17%"/>
-<Icon.CifLu width="17%"/>
-<Icon.CifLv width="17%"/>
-<Icon.CifLy width="17%"/>
-<Icon.CifMa width="17%"/>
-<Icon.CifMc width="17%"/>
-<Icon.CifMd width="17%"/>
-<Icon.CifMe width="17%"/>
-<Icon.CifMg width="17%"/>
-<Icon.CifMh width="17%"/>
-<Icon.CifMk width="17%"/>
-<Icon.CifMl width="17%"/>
-<Icon.CifMm width="17%"/>
-<Icon.CifMn width="17%"/>
-<Icon.CifMr width="17%"/>
-<Icon.CifMt width="17%"/>
-<Icon.CifMu width="17%"/>
-<Icon.CifMv width="17%"/>
-<Icon.CifMw width="17%"/>
-<Icon.CifMx width="17%"/>
-<Icon.CifMy width="17%"/>
-<Icon.CifMz width="17%"/>
-<Icon.CifNa width="17%"/>
-<Icon.CifNe width="17%"/>
-<Icon.CifNg width="17%"/>
-<Icon.CifNi width="17%"/>
-<Icon.CifNl width="17%"/>
-<Icon.CifNo width="17%"/>
-<Icon.CifNp width="17%"/>
-<Icon.CifNr width="17%"/>
-<Icon.CifNu width="17%"/>
-<Icon.CifNz width="17%"/>
-<Icon.CifOm width="17%"/>
-<Icon.CifPa width="17%"/>
-<Icon.CifPe width="17%"/>
-<Icon.CifPg width="17%"/>
-<Icon.CifPh width="17%"/>
-<Icon.CifPk width="17%"/>
-<Icon.CifPl width="17%"/>
-<Icon.CifPt width="17%"/>
-<Icon.CifPw width="17%"/>
-<Icon.CifPy width="17%"/>
-<Icon.CifQa width="17%"/>
-<Icon.CifRo width="17%"/>
-<Icon.CifRs width="17%"/>
-<Icon.CifRu width="17%"/>
-<Icon.CifRw width="17%"/>
-<Icon.CifSa width="17%"/>
-<Icon.CifSb width="17%"/>
-<Icon.CifSc width="17%"/>
-<Icon.CifSd width="17%"/>
-<Icon.CifSe width="17%"/>
-<Icon.CifSg width="17%"/>
-<Icon.CifSi width="17%"/>
-<Icon.CifSk width="17%"/>
-<Icon.CifSl width="17%"/>
-<Icon.CifSm width="17%"/>
-<Icon.CifSn width="17%"/>
-<Icon.CifSo width="17%"/>
-<Icon.CifSr width="17%"/>
-<Icon.CifSs width="17%"/>
-<Icon.CifSt width="17%"/>
-<Icon.CifSv width="17%"/>
-<Icon.CifSy width="17%"/>
-<Icon.CifSz width="17%"/>
-<Icon.CifTd width="17%"/>
-<Icon.CifTg width="17%"/>
-<Icon.CifTh width="17%"/>
-<Icon.CifTj width="17%"/>
-<Icon.CifTl width="17%"/>
-<Icon.CifTm width="17%"/>
-<Icon.CifTn width="17%"/>
-<Icon.CifTo width="17%"/>
-<Icon.CifTr width="17%"/>
-<Icon.CifTt width="17%"/>
-<Icon.CifTv width="17%"/>
-<Icon.CifTw width="17%"/>
-<Icon.CifTz width="17%"/>
-<Icon.CifUa width="17%"/>
-<Icon.CifUg width="17%"/>
-<Icon.CifUs width="17%"/>
-<Icon.CifUy width="17%"/>
-<Icon.CifUz width="17%"/>
-<Icon.CifVa width="17%"/>
-<Icon.CifVc width="17%"/>
-<Icon.CifVe width="17%"/>
-<Icon.CifVg width="17%"/>
-<Icon.CifVn width="17%"/>
-<Icon.CifWs width="17%"/>
-<Icon.CifXk width="17%"/>
-<Icon.CifYe width="17%"/>
-<Icon.CifZa width="17%"/>
-<Icon.CifZm width="17%"/>
-<Icon.CifZw width="17%"/>
+<TableSearch
+  placeholder="Search by icon name"
+  hoverable={true}
+  bind:inputValue={searchTerm}
+  {divClass}
+>
+  <Tabs style="pill" {contentClass} class="p-4">
+    <TabItem open>
+      <span slot="title" class="text-lg">Mono</span>
+      <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white">
+        {#each filteredEntries as [name, component]}
+          {#if name.includes('Cif')}
+          <div class="flex gap-4 items-center text-lg">
+            <svelte:component this={component} class="shrink-0 h-8 w-8" />
+            {name}
+          </div>
+          {/if}
+        {/each}
+      </div>
+    </TabItem>
+    <TabItem>
+      <span slot="title" class="text-lg">Random Hex Colors</span>
+      <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white">
+        {#each filteredEntries as [name, component]}
+        {#if name.includes('Cif')}
+          <div class="flex gap-4 items-center text-lg">
+            <svelte:component
+              this={component}
+              color={random_hex_color_code()}
+              class="shrink-0 h-8 w-8"
+            />
+            {name}
+          </div>
+          {/if}
+        {/each}
+      </div>
+    </TabItem>
+    <TabItem>
+      <span slot="title" class="text-lg">Random Tailwind CSS Colors</span>
+      <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white">
+        {#each filteredEntries as [name, component]}
+        {#if name.includes('Cif')}
+          <div class="flex gap-4 items-center text-lg">
+            <svelte:component this={component} class={random_tailwind_color()} />
+            {name}
+          </div>
+        {/if}
+        {/each}
+      </div>
+    </TabItem>
+  </Tabs>
+</TableSearch>

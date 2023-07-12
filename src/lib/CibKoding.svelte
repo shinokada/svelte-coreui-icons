@@ -1,32 +1,23 @@
 <script>
-	export let color = 'currentColor';
-	export let role = 'img';
-	export let size = '32';
-	export let ariaLabel = 'cib koding';
+export let color = "currentColor"
+export let role="img";
+export let size = "32"; export let ariaLabel="cib koding" 
 </script>
-
-<svg
-	xmlns="http://www.w3.org/2000/svg"
-	width={size}
-	height={size}
-	{role}
-	{...$$restProps}
-	aria-label={ariaLabel}
-	fill={color}
-	on:click
-	on:keydown
-	on:keyup
-	on:focus
-	on:blur
-	on:mouseenter
-	on:mouseleave
-	on:mouseover
-	on:mouseout
-	viewBox="0 0 32 32"
->
-	<path
-		d="M1.068 0h29.599v8h-29.333v-8zM1.068 12h22.932v8h-23.068v-8zM1.068 24h29.599v8h-29.333v-8z"
-	/>
+<svg xmlns="http://www.w3.org/2000/svg" width="{size}" height="{size}" {role}
+{...$$restProps}
+aria-label="{ariaLabel}"
+fill="{color}"
+on:click
+on:keydown
+on:keyup
+on:focus
+on:blur
+on:mouseenter
+on:mouseleave
+on:mouseover
+on:mouseout
+ viewBox="0 0 32 32">
+  <path d="M1.068 0h29.599v8h-29.333v-8zM1.068 12h22.932v8h-23.068v-8zM1.068 24h29.599v8h-29.333v-8z"/>
 </svg>
 
 <!--
