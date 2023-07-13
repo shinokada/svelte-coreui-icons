@@ -38,17 +38,17 @@
   
 <Navbar let:hidden let:toggle class="dark:bg-stone-800" >
   <NavBrand href="/">
-    <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+    <span class="self-center whitespace-nowrap text-2xl font-semibold text-primary-700 dark:text-primary-500">
       Svelte CoreUI Icons
     </span>
   </NavBrand>
   <NavHamburger on:click={toggle} />
   <NavUl {hidden}>
     <NavLi href="/" active={activeUrl === '/'}>Home</NavLi>
-    <NavLi href="/brand" active={activeUrl === '/outline'}>Brand</NavLi>
-    <NavLi href="/flag" active={activeUrl === '/solid'}>Flag</NavLi>
-    <NavLi href="/free" active={activeUrl === '/solid'}>Free</NavLi>
-    <NavLi href="/docs" active={activeUrl === '/docs'}>Docs</NavLi>
+    <NavLi href="/brand" active={activeUrl === '/brand'}>Brand</NavLi>
+    <NavLi href="/flag" active={activeUrl === '/flag'}>Flag</NavLi>
+    <NavLi href="/free" active={activeUrl === '/free'}>Free</NavLi>
+    <NavLi href="/all" active={activeUrl === '/all'}>All</NavLi>
     <NavLi href="https://github.com/shinokada/svelte-coreui-icons">GitHub</NavLi>
     <NavLi href="https://svelte-svg-icons.vercel.app/">Icon sets</NavLi>
   </NavUl>
@@ -58,11 +58,11 @@
   <slot />
 </div>
 
-<Footer footerType="logo" class="dark:bg-stone-800">
+<Footer footerType="logo" class="dark:bg-stone-800 mx-8">
   <div class="sm:flex sm:items-center sm:justify-between">
     <FooterBrand
     href="https://svelte-coreui-icons.vercel.app/"
-    name="Svelte Coreui Icons"
+    name="Svelte Coreui Icons" classSpan="text-primary-700 dark:text-primary-500"
   />
   <FooterLinkGroup ulClass="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
     <FooterLink href="/brand">Brand</FooterLink>
