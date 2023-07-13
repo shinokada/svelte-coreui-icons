@@ -50,8 +50,6 @@ If you need only a few icons from this library in your Svelte app, import them d
 
 If you are a TypeScript user, install **typescript version 5.0.0 or above**.
 
-As of March 2023, the `typescript@beta` version is now available:
-
 ```sh
 pnpm i -D typescript@beta
 ```
