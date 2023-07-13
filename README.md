@@ -16,6 +16,16 @@ Thank you for considering my open-source package. If you use it in a commercial 
 
 [GitHub Repo](https://github.com/shinokada/svelte-coreui-icons)
 
+## Original source
+
+[coreui/coreui-icons](https://github.com/coreui/coreui-icons)
+
+## License
+
+[Svelte-Coreui-Icons License](https://github.com/shinokada/svelte-coreui-icons/blob/main/LICENSE)
+
+[Coreui-Icons LICENSE](https://github.com/coreui/coreui-icons/blob/main/LICENSE)
+
 ## Installation
 
 ```sh
