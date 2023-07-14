@@ -17,6 +17,7 @@
   placeholder="Search by icon name"
   hoverable={true}
   bind:inputValue={searchTerm}
+  divClass='relative overflow-x-auto'
 >
   <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white">
     {#each filteredEntries as [name, component]}
