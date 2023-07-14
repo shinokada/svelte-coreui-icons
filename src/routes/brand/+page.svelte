@@ -32,7 +32,7 @@
   <Tabs style="pill" {contentClass} class="p-4">
     <TabItem open>
       <span slot="title" class="text-lg">Mono</span>
-      <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white">
+      <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white">
         {#each filteredEntries as [name, component]}
           {#if name.includes('Cib')}
           <div class="flex gap-4 items-center text-lg">
@@ -45,7 +45,7 @@
     </TabItem>
     <TabItem>
       <span slot="title" class="text-lg">Random Hex Colors</span>
-      <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white">
+      <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white">
         {#each filteredEntries as [name, component]}
         {#if name.includes('Cib')}
           <div class="flex gap-4 items-center text-lg">
@@ -62,7 +62,7 @@
     </TabItem>
     <TabItem>
       <span slot="title" class="text-lg">Random Tailwind CSS Colors</span>
-      <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white">
+      <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white">
         {#each filteredEntries as [name, component]}
         {#if name.includes('Cib')}
           <div class="flex gap-4 items-center text-lg">

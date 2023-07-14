@@ -38,6 +38,7 @@
     image:'https://open-graph-vercel.vercel.app/api/svelte-coreui-icons',
     imageAlt: "Svelte CoreUI Icons"
   }} />
+  
 <header class="flex-none w-full mx-auto bg-white dark:bg-stone-800">
   <Navbar color="default" fluid let:hidden let:toggle class="dark:bg-stone-800 ">
     <NavBrand href="/">
