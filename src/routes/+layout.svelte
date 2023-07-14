@@ -64,7 +64,7 @@
   <slot />
 </div>
 
-<Footer footerType="logo" class="dark:bg-stone-800 mx-8">
+<Footer footerType="logo" class="dark:bg-stone-800">
   <div class="sm:flex sm:items-center sm:justify-between">
     <FooterBrand
     href="https://svelte-coreui-icons.vercel.app/"
