@@ -2,6 +2,8 @@
   import Tabs from 'flowbite-svelte/Tabs.svelte';
   import TabItem from 'flowbite-svelte/TabItem.svelte';
   import TableSearch from 'flowbite-svelte/TableSearch.svelte';
+  import Label from 'flowbite-svelte/Label.svelte';
+  import Range from 'flowbite-svelte/Range.svelte';
 
   import * as Icons from '$lib';
 

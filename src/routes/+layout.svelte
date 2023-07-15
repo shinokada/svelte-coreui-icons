@@ -51,7 +51,6 @@
       <NavLi class="lg:px-2 lg:mb-0" active={activeUrl === '/brand'} href="/brand">Brand</NavLi>
       <NavLi class="lg:px-2 lg:mb-0" active={activeUrl === '/flag'} href="/flag">Flag</NavLi>
       <NavLi class="lg:px-2 lg:mb-0" active={activeUrl === '/free'} href="/free">Free</NavLi>
-      <NavLi class="lg:px-2 lg:mb-0" active={activeUrl === '/all'} href="/all">All</NavLi>
       <NavLi class="lg:px-2 lg:mb-0" href="https://github.com/shinokada/svelte-coreui-icons">GitHub</NavLi>
       <NavLi href="https://svelte-svg-icons.vercel.app/">Icon sets</NavLi>
     </NavUl>
@@ -76,7 +75,6 @@
     <FooterLink href="/brand">Brand</FooterLink>
     <FooterLink href="/flag">Flag</FooterLink>
     <FooterLink href="/free">Free</FooterLink>
-    <FooterLink href="/all">All</FooterLink>
     <FooterLink href="https://github.com/shinokada/svelte-coreui-icons/blob/main/LICENSE">Licensing</FooterLink>
     <FooterLink href="https://github.com/shinokada/svelte-coreui-icons/">GitHub</FooterLink>
   </FooterLinkGroup>
