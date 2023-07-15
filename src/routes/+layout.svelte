@@ -14,13 +14,13 @@
   import { MetaTags } from 'svelte-meta-tags';
 
   $: activeUrl = $page.url.pathname;
-
+  const title = "Svelte CoreUI Icons"
   let divClass = 'w-full ml-auto lg:block lg:w-auto order-1 lg:order-none';
   let ulClass = 'flex flex-col py-3 my-4 lg:flex-row lg:my-0 text-sm font-medium gap-4';
 </script>
 
 <MetaTags
-  title="Svelte CoreUI Icons"
+  title="{title}"
   description="CoreUI icon set for Svelte"
   openGraph={{
     type: 'website',
@@ -42,9 +42,8 @@
 <header class="flex-none w-full mx-auto bg-white dark:bg-stone-800">
   <Navbar color="default" fluid let:hidden let:toggle class="dark:bg-stone-800 ">
     <NavBrand href="/">
-      <span class="self-center whitespace-nowrap text-2xl font-semibold text-primary-900 dark:text-primary-500"> Svelte CoreUI Icons </span>
+      <span class="self-center whitespace-nowrap text-2xl font-semibold text-primary-900 dark:text-primary-500"> {title} </span>
     </NavBrand>
-
     <NavUl {hidden} {divClass} {ulClass} on:click={() => setTimeout(toggle, 1)} 
       nonActiveClass="md:!pl-3 md:!py-2 lg:!pl-0 text-gray-700 hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 dark:text-white lg:dark:hover:text-primary-700 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent" activeClass="md:!pl-3 md:!py-2 lg:!pl-0 lg:text-gray-700 text-white dark:text-white bg-primary-700 lg:bg-transparent dark:bg-primary-600 lg:dark:bg-transparent cursor-default"
       >
@@ -53,6 +52,8 @@
       <NavLi class="lg:px-2 lg:mb-0" active={activeUrl === '/flag'} href="/flag">Flag</NavLi>
       <NavLi class="lg:px-2 lg:mb-0" active={activeUrl === '/free'} href="/free">Free</NavLi>
       <NavLi class="lg:px-2 lg:mb-0" active={activeUrl === '/all'} href="/all">All</NavLi>
+      <NavLi class="lg:px-2 lg:mb-0" href="https://github.com/shinokada/svelte-coreui-icons">GitHub</NavLi>
+      <NavLi href="https://svelte-svg-icons.vercel.app/">Icon sets</NavLi>
     </NavUl>
     <div class="flex items-center ml-auto">
       <DarkMode class="inline-block dark:hover:text-white hover:text-gray-900" />
