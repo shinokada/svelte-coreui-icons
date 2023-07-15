@@ -72,10 +72,11 @@
     name="Svelte Coreui Icons" classSpan="text-primary-700 dark:text-primary-500"
   />
   <FooterLinkGroup ulClass="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+    <FooterLink href="/">Home</FooterLink>
     <FooterLink href="/brand">Brand</FooterLink>
     <FooterLink href="/flag">Flag</FooterLink>
     <FooterLink href="/free">Free</FooterLink>
-    <FooterLink href="/docs">Docs</FooterLink>
+    <FooterLink href="/all">All</FooterLink>
     <FooterLink href="https://github.com/shinokada/svelte-coreui-icons/blob/main/LICENSE">Licensing</FooterLink>
     <FooterLink href="https://github.com/shinokada/svelte-coreui-icons/">GitHub</FooterLink>
   </FooterLinkGroup>
