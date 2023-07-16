@@ -240,4 +240,4 @@ Use `import * as Icon from 'svelte-coreui-icons`.
 
 ## Other icons
 
-- [Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
+[Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
