@@ -8,7 +8,7 @@
 <a href="https://www.npmjs.com/package/svelte-coreui-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-coreui-icons.svg" alt="npm" height="25" style="height: 25px !important;"></a>
 </div>
 
-[Coreui Icons](https://github.com/coreui/coreui-icons) for Svelte.
+1500+ [Coreui Icons](https://github.com/coreui/coreui-icons) for Svelte.
 
 Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on [the GitHub sponsor](https://github.com/sponsors/shinokada). Your support helps me maintain and improve this package for the benefit of the community.
 
