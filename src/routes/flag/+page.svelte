@@ -7,7 +7,7 @@
 
   import * as Icons from '$lib';
 
-  const contentClass = ' rounded-lg dark:bg-stone-800 mt-4';
+  const contentClass = ' rounded-lg dark:bg-stone-950 mt-4';
   let searchTerm = '';
 
   $: filteredEntries = Object.entries(Icons).filter(([name, component]) => {
