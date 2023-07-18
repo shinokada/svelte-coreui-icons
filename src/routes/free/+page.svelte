@@ -27,6 +27,7 @@
   let size=32;
 </script>
 
+<h1>Svelte Coreui Icons: Free</h1>
 <TableSearch
   placeholder="Search by icon name"
   hoverable={true}
