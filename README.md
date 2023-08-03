@@ -8,7 +8,7 @@
 <a href="https://www.npmjs.com/package/svelte-coreui-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-coreui-icons.svg" alt="npm" height="25" style="height: 25px !important;"></a>
 </div>
 
-1500+ [Coreui Icons](https://github.com/coreui/coreui-icons) for Svelte.
+[Coreui Icons](https://github.com/coreui/coreui-icons) for Svelte.
 
 Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on [the GitHub sponsor](https://github.com/sponsors/shinokada). Your support helps me maintain and improve this package for the benefit of the community.
 
@@ -38,50 +38,22 @@ In a svelte file:
 
 ```html
 <script>
-  import { Cib500px } from 'svelte-coreui-icons';
+  import { Icon } from 'svelte-coreui-icons';
 </script>
 
-<Cib500px />
-<Activity />
-<Airplay />
+<Icon name="cib-svelte" />
+<Icon name="cif-us" />
+<Icon name="cil-align-left" />
 ```
-
-## Faster compiling
-
-If you need only a few icons from this library in your Svelte app, import them directly. This can optimize compilation speed and improve performance by reducing the amount of code processed during compilation.
-
-```html
-<script>
-  import Cib500px from 'svelte-coreui-icons/Cib500px.svelte';
-</script>
-
-<Cib500px />
-```
-
-If you are a TypeScript user, install **typescript version 5.0.0 or above**.
-
-```sh
-pnpm i -D typescript@beta
-```
-
-To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleResolution` in your tsconfig.json file.
-
-```json
-{
-  //...
-  "compilerOptions": {
-    // ...
-    "moduleResolution": "nodenext"
-  }
-}
-```
-
 
 ## Props
 
-- size = '24';
-- role = 'img';
-- color = 'currentColor';
+- @prop name;
+- @prop width = "24";
+- @prop height = "24";
+- @prop role = 'img';
+- @prop color = 'currentColor'
+- @prop ariaLabel='icon name'
 
 ## IDE support
 
@@ -89,20 +61,16 @@ If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, o
 
 ## Size
 
-Use the `size` prop to change the size of icons.
+Use the `width` and `height` props to change the size of icons.
 
 ```html
-<script>
-  import { Cib500px } from 'svelte-coreui-icons';
-</script>
-
-<Cib500px size="30" />
+<Icon name="cib-svelte" width="100" height="100" />
 ```
 
-If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by including the desired classes in the `class` prop. For example:
+If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by including the desired classes in the class prop. For example:
 
 ```html
-<Cib500px class="shrink-0 h-20 w-20" />
+<Icon name="cib-svelte" class="shrink-0 h-20 w-20" />
 ```
 
 ## CSS HEX Colors
@@ -110,54 +78,42 @@ If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by i
 Use the `color` prop to change colors with HEX color code.
 
 ```html
-<script>
-  import { Cib500px } from 'svelte-coreui-icons';
-</script>
-
-<Cib500px color="#c61515" />
+<Icon name="cib-svelte" color="#c61515" />
 ```
 
 ## CSS frameworks suport
 
 You can apply CSS framework color and other attributes directly to the icon component or its parent tag using the `class` prop.
 
-Tailwind example:
+Tailwind CSS example:
 
 ```html
-<script>
-  import { Cib500px } from 'svelte-coreui-icons';
-</script>
-
-<Cib500px class="text-red-700 dark:text-green-300 inline m-1" />
+<Icon name="cib-svelte" class="text-red-700 inline m-1" />
 ```
 
-Bootstrap example:
+Bootstrap examples:
 
 ```html
-<Cib500px class="position-absolute top-0 px-1" />
+<Icon name="cib-svelte" class="position-absolute top-0 px-1" />
 ```
 
-## Dark mode with Tailwind CSS
+## Dark mode
 
 If you are using the dark mode on your website with Tailwind CSS, add your dark mode class to the `class` prop.
 
 Let's use `dark` for the dark mode class as an example.
 
 ```html
-<script>
-  import { Cib500px } from 'svelte-coreui-icons';
-</script>
-
-<Cib500px class="text-blue-700 dark:text-red-500" />
+<Icon name="cib-svelte" class="text-blue-700 dark:text-red-500" />
 ```
 
 ## aria-label
 
-All icons have aria-label. For example `Cib500px` has `aria-label="cib 500px"`.
+All icons have aria-label. For example `cib-svelte` has `aria-label="cib-svelte"`.
 Use `ariaLabel` prop to modify the `aria-label` value.
 
 ```html
-<Cib500px ariaLabel="my aria label" />
+<Icon name="cib-svelte" ariaLabel="red alarm" color="#c61515"/>
 ```
 
 ## Unfocusable icon
@@ -165,7 +121,7 @@ Use `ariaLabel` prop to modify the `aria-label` value.
 If you want to make an icon unfocusable, add `tabindex="-1"`.
 
 ```html
-<Cib500px tabindex="-1" />
+<Icon name="cib-svelte"  tabindex="-1" />
 ```
 
 ## Events
@@ -187,55 +143,48 @@ All icons have the following events:
 You can pass other attibutes as well.
 
 ```html
-<Cib500px tabindex="0" />
+<Icon name="cib-svelte"  tabindex="0" />
 ```
 
 ## Using svelte:component
 
 ```html
-<script>
-  import { Cib500px } from 'svelte-coreui-icons';
-</script>
-
-<svelte:component this="{Cib500px}" />
+<svelte:component this="{Icon}" name="cib-svelte" />
 ```
 
 ## Using onMount
 
 ```html
 <script>
-  import { Cib500px } from 'svelte-coreui-icons';
+  import {Icon} from 'svelte-coreui-icons';
   import { onMount } from 'svelte';
   const props = {
+    name: 'cib-svelte',
     size: '50',
     color: '#ff0000'
   };
   onMount(() => {
-    const icon = new Cib500px({ target: document.body, props });
+    const icon = new Icon({ target: document.body, props });
   });
 </script>
 ```
 
+
 ## Import all
 
-Use `import * as Icon from 'svelte-coreui-icons`.
+Use `import {Icon, icons} from 'svelte-coreui-icons';`.
 
 ```html
 <script>
-  import * as Icon from 'svelte-coreui-icons';
+  import {Icon, icons} from 'svelte-coreui-icons';
 </script>
 
-<h1>Size</h1>
-<Icon.Cib500px size="30" />
-<Icon.Cib500px size="40" />
-<Icon.Cib500px size="50" />
-
-<h1>CSS HEX color</h1>
-<Icon.Cib500px color="#c61515" size="40" />
-
-<h1>Tailwind CSS</h1>
-<Icon.Cib500px class="text-blue-500" />
-<Icon.Cib500px class="text-pink-700" />
+{#each Object.keys(icons) as name}
+<div class="flex gap-4 items-center text-lg">
+  <Icon name={name} bind:width={size} bind:height={size} class="shrink-0"/>
+  {name}
+</div>
+{/each}
 ```
 
 ## Other icons
