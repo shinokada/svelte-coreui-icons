@@ -86,7 +86,6 @@ If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by i
 <Cib500px class="shrink-0 h-20 w-20" />
 ```
 
-
 ## Creating a Default Global Icon Setting in Svelte
 
 You can create a config file, `/src/lib/icon.config.json`.
@@ -120,6 +119,9 @@ In your Svelte page file, make use of the configurations from the JSON file:
 
 ```html
 <script lang="ts">
+  
+  import config from '$lib/icon.config.json';
+  import { Icon, CibAndroidAlt, CilAlarm } from 'svelte-coreui-icons';
   type IconConfig = {
     config1: {
       size: number;
@@ -130,9 +132,6 @@ In your Svelte page file, make use of the configurations from the JSON file:
       color: string;
     };
   };
-  import config from '$lib/icon.config.json';
-  import { Icon, CibAndroidAlt, CilAlarm } from 'svelte-coreui-icons';
-
   const iconConfig: IconConfig = config;
   const config1 = iconConfig.config1;
   const config2 = iconConfig.config2;
