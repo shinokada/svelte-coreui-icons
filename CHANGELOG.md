@@ -2,12 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.3.1](https://github.com/shinokada/svelte-coreui-icons/compare/v0.2.2...v0.3.1) (2023-08-31)
+### [0.3.2](https://github.com/shinokada/svelte-coreui-icons/compare/v0.3.1...v0.3.2) (2023-08-31)
 
+### [0.3.1](https://github.com/shinokada/svelte-coreui-icons/compare/v0.2.2...v0.3.1) (2023-08-31)
 
 ### Features
 
-* smaller compiled size and Icon component ([1178ff6](https://github.com/shinokada/svelte-coreui-icons/commit/1178ff603cb60a0e646d95e9d56b61bd25d60b80))
+- smaller compiled size and Icon component ([1178ff6](https://github.com/shinokada/svelte-coreui-icons/commit/1178ff603cb60a0e646d95e9d56b61bd25d60b80))
 
 ### [0.2.2](https://github.com/shinokada/svelte-coreui-icons/compare/v0.2.1...v0.2.2) (2023-08-03)
 
