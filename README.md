@@ -38,22 +38,31 @@ In a svelte file:
 
 ```html
 <script>
-  import { Icon } from 'svelte-coreui-icons';
+  import { Cib500px } from 'svelte-coreui-icons';
 </script>
 
-<Icon name="cib-svelte" />
-<Icon name="cif-us" />
-<Icon name="cil-align-left" />
+<Cib500px />
+<Activity />
+<Airplay />
+```
+
+## Faster compiling
+
+If you need only a few icons from this library in your Svelte app, import them directly. This can optimize compilation speed and improve performance by reducing the amount of code processed during compilation.
+
+```html
+<script>
+  import Cib500px from 'svelte-coreui-icons/Cib500px.svelte';
+</script>
+
+<Cib500px />
 ```
 
 ## Props
 
-- @prop name;
-- @prop width = "24";
-- @prop height = "24";
-- @prop role = 'img';
-- @prop color = 'currentColor'
-- @prop ariaLabel='icon name'
+- size = '24';
+- role = 'img';
+- color = 'currentColor';
 
 ## IDE support
 
@@ -61,59 +70,170 @@ If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, o
 
 ## Size
 
-Use the `width` and `height` props to change the size of icons.
+Use the `size` prop to change the size of icons.
 
 ```html
-<Icon name="cib-svelte" width="100" height="100" />
+<script>
+  import { Cib500px } from 'svelte-coreui-icons';
+</script>
+
+<Cib500px size="30" />
 ```
 
-If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by including the desired classes in the class prop. For example:
+If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by including the desired classes in the `class` prop. For example:
 
 ```html
-<Icon name="cib-svelte" class="shrink-0 h-20 w-20" />
+<Cib500px class="shrink-0 h-20 w-20" />
 ```
+
+
+## Creating a Default Global Icon Setting in Svelte
+
+You can create a config file, `/src/lib/icon.config.json`.
+
+The `Icon` component serves as a wrapper for svelte:component, allowing you to establish a global default setting or expand the capabilities of a component.
+
+To create a default global icon setting, follow these steps:
+
+### Configuration File
+
+Start by creating a configuration file named `/src/lib/icon.config.json` with the following structure:
+
+```json
+{
+  "config1": {
+    "size": 40,
+    "color": "#FF5733"
+  },
+  "config2": {
+    "size": 50,
+    "color": "#445533"
+  }
+}
+```
+
+In this JSON file, you can define different configurations (config1 and config2 in this case) for your icons, specifying attributes like size, variation, and color.
+
+### Implementation
+
+In your Svelte page file, make use of the configurations from the JSON file:
+
+```html
+<script lang="ts">
+  type IconConfig = {
+    config1: {
+      size: number;
+      color: string;
+    };
+    config2: {
+      size: number;
+      color: string;
+    };
+  };
+  import config from '$lib/icon.config.json';
+  import { Icon, CibAndroidAlt, CilAlarm } from 'svelte-coreui-icons';
+
+  const iconConfig: IconConfig = config;
+  const config1 = iconConfig.config1;
+  const config2 = iconConfig.config2;
+</script>
+
+<Icon {...config1} icon="{CibAndroidAlt}" />
+<Icon {...config2} icon="{CilAlarm}" />
+```
+
+We import the configurations from the JSON file and assign them to config1 and config2. We then utilize the Icon component with the spread attributes `{...config1}` and `{...config2}` to apply the respective configurations to each icon.
+
+### Custom Default Icon
+
+If you wish to create a custom default icon, you can follow these steps:
+
+Create a Svelte component named `src/lib/MyIcon.svelte`:
+
+```html
+<script lang="ts">
+  import type { ComponentType } from 'svelte';
+  const config = {
+    size: 30,
+    color: '#FF5733'
+  };
+  import { Icon } from 'svelte-coreui-icons';
+  export let icon: ComponentType;
+</script>
+
+<Icon {...config} {icon} />
+```
+
+This component, `MyIcon.svelte`, accepts an `icon` prop which you can use to pass in the specific icon component you want to display. The default configuration is also applied to the icon.
+
+### Implementation in a Page
+
+To use your custom default icon in a Svelte page, do the following:
+
+```html
+<script>
+  import MyIcon from '$lib/MyIcon.svelte';
+  import { CibAndroidAlt } from 'svelte-coreui-icons';
+</script>
+
+<MyIcon icon="{CibAndroidAlt}" />
+```
+
+Here, we import the `MyIcon` component and the `CibAndroidAlt` icon. By passing the `CibAndroidAlt` icon to the `icon` prop of MyIcon, you apply the default configuration to the icon.
 
 ## CSS HEX Colors
 
 Use the `color` prop to change colors with HEX color code.
 
 ```html
-<Icon name="cib-svelte" color="#c61515" />
+<script>
+  import { Cib500px } from 'svelte-coreui-icons';
+</script>
+
+<Cib500px color="#c61515" />
 ```
 
 ## CSS frameworks suport
 
 You can apply CSS framework color and other attributes directly to the icon component or its parent tag using the `class` prop.
 
-Tailwind CSS example:
+Tailwind example:
 
 ```html
-<Icon name="cib-svelte" class="text-red-700 inline m-1" />
+<script>
+  import { Cib500px } from 'svelte-coreui-icons';
+</script>
+
+<Cib500px class="text-red-700 dark:text-green-300 inline m-1" />
 ```
 
-Bootstrap examples:
+Bootstrap example:
 
 ```html
-<Icon name="cib-svelte" class="position-absolute top-0 px-1" />
+<Cib500px class="position-absolute top-0 px-1" />
 ```
 
-## Dark mode
+## Dark mode with Tailwind CSS
 
 If you are using the dark mode on your website with Tailwind CSS, add your dark mode class to the `class` prop.
 
 Let's use `dark` for the dark mode class as an example.
 
 ```html
-<Icon name="cib-svelte" class="text-blue-700 dark:text-red-500" />
+<script>
+  import { Cib500px } from 'svelte-coreui-icons';
+</script>
+
+<Cib500px class="text-blue-700 dark:text-red-500" />
 ```
 
 ## aria-label
 
-All icons have aria-label. For example `cib-svelte` has `aria-label="cib-svelte"`.
+All icons have aria-label. For example `Cib500px` has `aria-label="cib 500px"`.
 Use `ariaLabel` prop to modify the `aria-label` value.
 
 ```html
-<Icon name="cib-svelte" ariaLabel="red alarm" color="#c61515" />
+<Cib500px ariaLabel="my aria label" />
 ```
 
 ## Unfocusable icon
@@ -121,7 +241,7 @@ Use `ariaLabel` prop to modify the `aria-label` value.
 If you want to make an icon unfocusable, add `tabindex="-1"`.
 
 ```html
-<Icon name="cib-svelte" tabindex="-1" />
+<Cib500px tabindex="-1" />
 ```
 
 ## Events
@@ -143,47 +263,55 @@ All icons have the following events:
 You can pass other attibutes as well.
 
 ```html
-<Icon name="cib-svelte" tabindex="0" />
+<Cib500px tabindex="0" />
 ```
 
 ## Using svelte:component
 
 ```html
-<svelte:component this="{Icon}" name="cib-svelte" />
+<script>
+  import { Cib500px } from 'svelte-coreui-icons';
+</script>
+
+<svelte:component this="{Cib500px}" />
 ```
 
 ## Using onMount
 
 ```html
 <script>
-  import { Icon } from 'svelte-coreui-icons';
+  import { Cib500px } from 'svelte-coreui-icons';
   import { onMount } from 'svelte';
   const props = {
-    name: 'cib-svelte',
     size: '50',
     color: '#ff0000'
   };
   onMount(() => {
-    const icon = new Icon({ target: document.body, props });
+    const icon = new Cib500px({ target: document.body, props });
   });
 </script>
 ```
 
 ## Import all
 
-Use `import {Icon, icons} from 'svelte-coreui-icons';`.
+Use `import * as Icon from 'svelte-coreui-icons`.
 
 ```html
 <script>
-  import { Icon, icons } from 'svelte-coreui-icons';
+  import * as Icon from 'svelte-coreui-icons';
 </script>
 
-{#each Object.keys(icons) as name}
-<div class="flex gap-4 items-center text-lg">
-  <Icon name="{name}" class="shrink-0" />
-  {name}
-</div>
-{/each}
+<h1>Size</h1>
+<Icon.Cib500px size="30" />
+<Icon.Cib500px size="40" />
+<Icon.Cib500px size="50" />
+
+<h1>CSS HEX color</h1>
+<Icon.Cib500px color="#c61515" size="40" />
+
+<h1>Tailwind CSS</h1>
+<Icon.Cib500px class="text-blue-500" />
+<Icon.Cib500px class="text-pink-700" />
 ```
 
 ## Other icons
