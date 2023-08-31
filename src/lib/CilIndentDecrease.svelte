@@ -1,0 +1,46 @@
+<script>
+  export let color = 'currentColor';
+  export let role = 'img';
+  export let size = '32';
+  export let ariaLabel = 'cil indent decrease';
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  {role}
+  {...$$restProps}
+  aria-label={ariaLabel}
+  fill={color}
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+  viewBox="0 0 512 512"
+>
+  <rect width="424" height="32" x="72" y="63.998" fill="var(--ci-primary-color, {color})" />
+  <rect width="296" height="32" x="200" y="151.998" fill="var(--ci-primary-color, {color})" />
+  <rect width="296" height="32" x="200" y="239.998" fill="var(--ci-primary-color, {color})" />
+  <rect width="296" height="32" x="200" y="327.998" fill="var(--ci-primary-color, {color})" />
+  <rect width="424" height="32" x="72" y="415.998" fill="var(--ci-primary-color, {color})" />
+  <path
+    fill="var(--ci-primary-color, {color})"
+    d="M160,144.909,4.473,256,160,367.091Zm-32,160L59.527,256,128,207.091Z"
+  />
+</svg>
+
+<!--
+@component
+[Go to docs](https://svelte-coreui-icons.vercel.app)
+## Props
+@prop export let color = 'currentColor';
+@prop export let role = 'img';
+@prop export let size = '32';
+@prop export let ariaLabel = 'cil indent decrease';
+-->

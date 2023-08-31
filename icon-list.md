@@ -1,6 +1,7 @@
 # Icon names
 
 ## Brand
+
 - Cib500px
 - Cib500px5
 - CibAboutMe
@@ -833,6 +834,7 @@
 - CibZulip
 
 ## Flag
+
 - CifAd
 - CifAe
 - CifAf
@@ -1034,6 +1036,7 @@
 - CifZw
 
 ## Free
+
 - Cil3d
 - Cil4k
 - CilAccountLogout

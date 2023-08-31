@@ -113,7 +113,7 @@ All icons have aria-label. For example `cib-svelte` has `aria-label="cib-svelte"
 Use `ariaLabel` prop to modify the `aria-label` value.
 
 ```html
-<Icon name="cib-svelte" ariaLabel="red alarm" color="#c61515"/>
+<Icon name="cib-svelte" ariaLabel="red alarm" color="#c61515" />
 ```
 
 ## Unfocusable icon
@@ -121,7 +121,7 @@ Use `ariaLabel` prop to modify the `aria-label` value.
 If you want to make an icon unfocusable, add `tabindex="-1"`.
 
 ```html
-<Icon name="cib-svelte"  tabindex="-1" />
+<Icon name="cib-svelte" tabindex="-1" />
 ```
 
 ## Events
@@ -143,7 +143,7 @@ All icons have the following events:
 You can pass other attibutes as well.
 
 ```html
-<Icon name="cib-svelte"  tabindex="0" />
+<Icon name="cib-svelte" tabindex="0" />
 ```
 
 ## Using svelte:component
@@ -156,7 +156,7 @@ You can pass other attibutes as well.
 
 ```html
 <script>
-  import {Icon} from 'svelte-coreui-icons';
+  import { Icon } from 'svelte-coreui-icons';
   import { onMount } from 'svelte';
   const props = {
     name: 'cib-svelte',
@@ -169,19 +169,18 @@ You can pass other attibutes as well.
 </script>
 ```
 
-
 ## Import all
 
 Use `import {Icon, icons} from 'svelte-coreui-icons';`.
 
 ```html
 <script>
-  import {Icon, icons} from 'svelte-coreui-icons';
+  import { Icon, icons } from 'svelte-coreui-icons';
 </script>
 
 {#each Object.keys(icons) as name}
 <div class="flex gap-4 items-center text-lg">
-  <Icon name={name} class="shrink-0"/>
+  <Icon name="{name}" class="shrink-0" />
   {name}
 </div>
 {/each}
