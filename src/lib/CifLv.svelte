@@ -1,8 +1,9 @@
 <script>
-  export let color = 'currentColor';
-  export let role = 'img';
+  import { getContext } from 'svelte';
+  const ctx = getContext('iconCtx') ?? {};
   export let width;
   export let height;
+  export let role = ctx.role || 'img';
   export let ariaLabel = 'cif lv';
 </script>
 
@@ -13,7 +14,6 @@
   {role}
   {...$$restProps}
   aria-label={ariaLabel}
-  fill={color}
   on:click
   on:keydown
   on:keyup
@@ -35,9 +35,8 @@
 @component
 [Go to docs](https://svelte-coreui-icons.vercel.app)
 ## Props
-@prop export let color = 'currentColor';
-@prop export let role = 'img';
 @prop export let width;
 @prop export let height;
+@prop export let role = ctx.role || 'img';
 @prop export let ariaLabel = 'cif lv';
 -->

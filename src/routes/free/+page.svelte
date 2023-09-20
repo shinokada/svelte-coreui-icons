@@ -4,7 +4,7 @@
   import TableSearch from 'flowbite-svelte/TableSearch.svelte';
   import Label from 'flowbite-svelte/Label.svelte';
   import Range from 'flowbite-svelte/Range.svelte';
-  import {random_tailwind_color, random_hex_color_code } from '../utils.js';
+  import { random_tailwind_color, random_hex_color_code } from '../utils/utils.js';
 
   import * as Icons from '$lib';
 

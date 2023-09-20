@@ -1,7 +1,9 @@
 <script>
-  export let color = 'currentColor';
-  export let role = 'img';
-  export let size = '32';
+  import { getContext } from 'svelte';
+  const ctx = getContext('iconCtx') ?? {};
+  export let size = ctx.size || '32';
+  export let role = ctx.role || 'img';
+  export let color = ctx.color || 'currentColor';
   export let ariaLabel = 'cib mojang';
 </script>
 
@@ -33,8 +35,8 @@
 @component
 [Go to docs](https://svelte-coreui-icons.vercel.app)
 ## Props
-@prop export let color = 'currentColor';
-@prop export let role = 'img';
-@prop export let size = '32';
+@prop export let size = ctx.size || '32';
+@prop export let role = ctx.role || 'img';
+@prop export let color = ctx.color || 'currentColor';
 @prop export let ariaLabel = 'cib mojang';
 -->
