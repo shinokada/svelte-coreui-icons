@@ -1,14 +1,10 @@
 <script>
   import { setContext } from 'svelte';
-  import { CibAdobeAfterEffects, CibAllocine } from '$lib';
+  import { CifZw } from '$lib';
   const iconCtx = {
-    size: '200', // Icon size in pixels
-    color: '#444488', // Icon color in hexadecimal or CSS color name
-    role: 'svg icon image'
+    width: '200'
   };
   setContext('iconCtx', iconCtx);
-  let size = '24';
 </script>
 
-<CibAdobeAfterEffects />
-<CibAllocine />
+<CifZw />

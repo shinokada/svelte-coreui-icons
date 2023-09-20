@@ -1,8 +1,8 @@
 <script>
   import { getContext } from 'svelte';
   const ctx = getContext('iconCtx') ?? {};
-  export let width;
-  export let height;
+  export let width = ctx.width || 301;
+  export let height = ctx.height || 151;
   export let role = ctx.role || 'img';
   export let ariaLabel = 'cif sb';
 </script>
@@ -48,8 +48,8 @@
 @component
 [Go to docs](https://svelte-coreui-icons.vercel.app)
 ## Props
-@prop export let width;
-@prop export let height;
+@prop export let width = ctx.width || 301;
+@prop export let height = ctx.height || 151;
 @prop export let role = ctx.role || 'img';
 @prop export let ariaLabel = 'cif sb';
 -->
