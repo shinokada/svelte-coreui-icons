@@ -1,11 +1,13 @@
+
+
 # Svelte Coreui Icons
 
 <div class="flex gap-2 my-8">
-<a href="https://github.com/sponsors/shinokada" target="_blank"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" alt="sponsor" height="25" style="height: 25px !important;"></a>
-<a href="https://www.npmjs.com/package/svelte-coreui-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/v/svelte-coreui-icons" alt="npm" height="25" style="height: 25px !important;"></a>
-<a href="https://twitter.com/shinokada" rel="nofollow" target="_blank"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada" height="25" style="height: 25px !important;"></a>
-<a href="https://opensource.org/licenses/MIT" rel="nofollow" target="_blank"><img src="https://img.shields.io/github/license/shinokada/svelte-coreui-icons" alt="License" height="25" style="height: 25px !important;"></a>
-<a href="https://www.npmjs.com/package/svelte-coreui-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-coreui-icons.svg" alt="npm" height="25" style="height: 25px !important;"></a>
+<a href="https://github.com/sponsors/shinokada" target="_blank"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" alt="sponsor" ></a>
+<a href="https://www.npmjs.com/package/svelte-coreui-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/v/svelte-coreui-icons" alt="npm" ></a>
+<a href="https://twitter.com/shinokada" rel="nofollow" target="_blank"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada" ></a>
+<a href="https://opensource.org/licenses/MIT" rel="nofollow" target="_blank"><img src="https://img.shields.io/github/license/shinokada/svelte-coreui-icons" alt="License" ></a>
+<a href="https://www.npmjs.com/package/svelte-coreui-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-coreui-icons.svg" alt="npm" ></a>
 </div>
 
 [Coreui Icons](https://github.com/coreui/coreui-icons) for Svelte.
@@ -60,9 +62,19 @@ If you need only a few icons from this library in your Svelte app, import them d
 
 ## Props
 
-- size = '24';
-- role = 'img';
-- color = 'currentColor';
+### Brand & Free
+
+- size = ctx.size || '32';
+- role = ctx.role || 'img';
+- color = ctx.color || 'currentColor';
+- ariaLabel = 'file name';
+
+### Flag
+
+- width = ctx.width || 301;
+- height = ctx.height || 151;
+- role = ctx.role || 'img';
+- ariaLabel = 'file name';
 
 ## IDE support
 
@@ -86,7 +98,47 @@ If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by i
 <Cib500px class="shrink-0 h-20 w-20" />
 ```
 
-## Creating a Default Global Icon Setting in Svelte
+## Setting Global Icon using setContext
+
+You can establish global icon preferences in your Svelte application using `setContext`. This allows you to configure icon-related properties once and share them across multiple components. Here's how you can do it:
+
+
+```html
+<script>
+  import { setContext } from 'svelte';
+
+  // Define your global icon settings
+  const iconCtx = {
+    size: '100', // Icon size in pixels
+    color: '#ff4488', // Icon color in hexadecimal or CSS color name
+    role: 'svg icon image' // Accessible role for the icon
+  };
+  setContext('iconCtx', iconCtx);
+</script>
+```
+
+The `size`, `color`, and `role` properties are optional, allowing you to fine-tune the appearance and accessibility of your icons as needed.
+
+If you set `size`, icons can be customized with different colors. For example:
+
+```html
+<script>
+  import { setContext } from 'svelte';
+  import { Cib500px } from 'svelte-coreui-icons';
+  const iconCtx = {
+    size: '50'
+  };
+  setContext('iconCtx', iconCtx);
+</script>
+
+<Cib500px color="#ff4488" />
+```
+
+Remember that you can set only one or two of these properties, allowing you to tailor icon settings to your specific design and accessibility requirements.
+
+Feel free to mix and match these properties as needed to create visually appealing and accessible icons in your Svelte application.
+
+## Creating a Default Icon Setting
 
 You can create a config file, `/src/lib/icon.config.json`.
 
@@ -119,6 +171,8 @@ In your Svelte page file, make use of the configurations from the JSON file:
 
 ```html
 <script lang="ts">
+  import config from '$lib/icon.config.json';
+  import { Icon, CibAndroidAlt, CilAlarm } from 'svelte-coreui-icons';
   type IconConfig = {
     config1: {
       size: number;
@@ -129,9 +183,6 @@ In your Svelte page file, make use of the configurations from the JSON file:
       color: string;
     };
   };
-  import config from '$lib/icon.config.json';
-  import { Icon, CibAndroidAlt, CilAlarm } from 'svelte-coreui-icons';
-
   const iconConfig: IconConfig = config;
   const config1 = iconConfig.config1;
   const config2 = iconConfig.config2;
