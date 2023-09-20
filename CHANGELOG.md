@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.4](https://github.com/shinokada/svelte-coreui-icons/compare/v0.3.3...v0.3.4) (2023-09-20)
+
+
+### Features
+
+* add context to flags ([d4ab116](https://github.com/shinokada/svelte-coreui-icons/commit/d4ab116bc1370514cd996a42cfd95f4a0b1aee2a))
+* add context to icons, add data-sveltekit-reload to Home link so that it reloads sidebar menu and afterNavigate scrollTo in the +layout.svelte ([51cfcd6](https://github.com/shinokada/svelte-coreui-icons/commit/51cfcd682f0c2f1015d9d8a875fef9ace2e8ed1e))
+
 ### [0.3.3](https://github.com/shinokada/svelte-coreui-icons/compare/v0.3.2...v0.3.3) (2023-08-31)
 
 ### [0.3.2](https://github.com/shinokada/svelte-coreui-icons/compare/v0.3.1...v0.3.2) (2023-08-31)
