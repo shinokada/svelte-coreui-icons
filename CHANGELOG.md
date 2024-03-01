@@ -4,10 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.0.1](https://github.com/shinokada/svelte-coreui-icons/compare/v0.3.4...v1.0.1) (2024-01-27)
 
-
 ### Bug Fixes
 
-* NavHamburger class="ml-3 m-0 lg:hidden md:block" ([3992f21](https://github.com/shinokada/svelte-coreui-icons/commit/3992f21cf357d7a3938a55440e37be4e04f2e2e3))
+- NavHamburger class="ml-3 m-0 lg:hidden md:block" ([3992f21](https://github.com/shinokada/svelte-coreui-icons/commit/3992f21cf357d7a3938a55440e37be4e04f2e2e3))
 
 ### [0.3.4](https://github.com/shinokada/svelte-coreui-icons/compare/v0.3.3...v0.3.4) (2023-09-20)
 
