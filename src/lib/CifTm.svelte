@@ -1158,7 +1158,7 @@
 
 <!--
 @component
-[Go to docs](https://svelte-coreui-icons.vercel.app)
+[Go to docs](https://svelte-coreui-icons.codewithshin.com)
 ## Props
 @prop export let width = ctx.width || 300;
 @prop export let height = ctx.height || 201;

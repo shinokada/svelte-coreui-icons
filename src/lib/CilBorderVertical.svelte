@@ -84,7 +84,7 @@
 
 <!--
 @component
-[Go to docs](https://svelte-coreui-icons.vercel.app)
+[Go to docs](https://svelte-coreui-icons.codewithshin.com)
 ## Props
 @prop export let size = ctx.size || '32';
 @prop export let role = ctx.role || 'img';
