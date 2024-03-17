@@ -17,5 +17,5 @@ test('Flag page has expected h1', async ({ page }) => {
 
 test('Free page has expected h1', async ({ page }) => {
   await page.goto('/free');
-  await expect(page.getByRole('heading', { name: 'Svelte CoreUI Icons: Free' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Svelte Coreui Icons: Free' })).toBeVisible();
 });
